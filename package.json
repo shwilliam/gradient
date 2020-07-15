@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node dist/index.js",
     "build": "NODE_ENV=production rollup -c",
-    "dev": "rollup -c -w",
+    "dev": "NODE_ENV=development rollup -c -w",
     "setup:env": "node -r dotenv/config src/index.js",
     "test": "echo \"🥺\" && exit 1"
   },
@@ -26,10 +26,10 @@
   "devDependencies": {
     "@babel/core": "^7.10.5",
     "@babel/preset-env": "^7.10.4",
+    "@rollup/plugin-babel": "^5.1.0",
     "@rollup/plugin-run": "^2.0.2",
     "dotenv": "^8.2.0",
-    "rollup": "^2.21.0",
-    "rollup-plugin-babel": "^4.4.0"
+    "rollup": "^2.21.0"
   },
   "dependencies": {
     "cors": "^2.8.5",

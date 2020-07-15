@@ -1,12 +1,12 @@
 import run from '@rollup/plugin-run'
-import babel from 'rollup-plugin-babel'
+import babel from '@rollup/plugin-babel'
 
-const dev = process.env.NODE_ENV !== 'production'
+const dev = process.env.NODE_ENV === 'development'
 
 export default {
   input: 'src/index.js',
   output: {
-    file: 'dist/index.js',
+    dir: 'build',
     format: 'cjs',
   },
   plugins: [
