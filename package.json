@@ -4,7 +4,11 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node dist/index.js",
+    "build": "NODE_ENV=production rollup -c",
+    "dev": "rollup -c -w",
+    "setup:env": "node -r dotenv/config src/index.js",
+    "test": "echo \"🥺\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -18,5 +22,13 @@
   "bugs": {
     "url": "https://github.com/shwilliam/gradient-generator/issues"
   },
-  "homepage": "https://github.com/shwilliam/gradient-generator#readme"
+  "homepage": "https://github.com/shwilliam/gradient-generator#readme",
+  "devDependencies": {
+    "@babel/core": "^7.10.5",
+    "@babel/preset-env": "^7.10.4",
+    "@rollup/plugin-run": "^2.0.2",
+    "dotenv": "^8.2.0",
+    "rollup": "^2.21.0",
+    "rollup-plugin-babel": "^4.4.0"
+  }
 }
