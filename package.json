@@ -1,7 +1,8 @@
 {
   "name": "gradient-generator",
-  "version": "0.1.0",
   "description": "",
+  "version": "0.1.0",
+  "private": "true",
   "main": "dist/index.js",
   "scripts": {
     "start": "node dist/index.js",
@@ -14,9 +15,6 @@
     "type": "git",
     "url": "git+https://github.com/shwilliam/gradient-generator.git"
   },
-  "keywords": [
-    "gradient"
-  ],
   "author": "William L",
   "license": "MIT",
   "bugs": {
