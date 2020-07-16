@@ -1,6 +1,6 @@
 {
-  "name": "gradient-generator",
-  "description": "",
+  "name": "gradient",
+  "description": "Gradients as a service",
   "version": "0.1.0",
   "private": "true",
   "main": "build/index.js",
