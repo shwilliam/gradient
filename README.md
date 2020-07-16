@@ -24,9 +24,10 @@ A request for a gradient will, by default, return a `200px` by `200px` SVG.
 
 Pass optional URL parameters to format the requested gradient.
 
-| Key    | Required | Default |           Type           |   Example   |
-| ------ | :------: | :-----: | :----------------------: | :---------: |
-| `type` |    ❌    | `'svg'` | `'svg' | 'png' | 'jpeg'` | `?type=png` |
+| Key    | Required | Default | Type                                       | Example                       |
+| ------ | :------: | ------- | ------------------------------------------ | ----------------------------- |
+| `type` |    ❌    | `'svg'` | `'svg'` \| `'png'` \| `'jpeg'`             | `?type=png`                   |
+| `size` |    ❌    | `200`   | `Number` (single or comma-separated tuple) | `?size=20`<br> `?size=100,20` |
 
 ## Development
 
