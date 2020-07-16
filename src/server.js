@@ -21,11 +21,13 @@ app.get('/', (_req, res) => {
   res.sendFile('/index.html')
 })
 
-app.get('/:seed', async (req, res) => {
+app.get('/:seed/:size?', async (req, res) => {
   try {
     const seed = req.params.seed
-    const {type, size} = req.query
-    const [width, height] = parseDimensions(size)
+    const sizeParam = req.params.size
+
+    const {type, size: sizeQuery} = req.query
+    const [width, height] = parseDimensions(sizeParam || sizeQuery)
 
     const seedHash = Math.abs(genHash(seed))
     const [colorA, colorB] = generateColorsFromHash(seedHash)
