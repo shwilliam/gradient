@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <title>@shwilliam/gradient</title>
+    <style>
+      body,
+      html {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 15px;
+        line-height: 1.25;
+      }
+
+      body {
+        padding: 0 2em;
+        margin: 0 auto;
+        max-width: 500px;
+        min-width: 200px;
+      }
+
+      a,
+      a:visited {
+        color: currentColor;
+      }
+
+      section {
+        margin: 2.5em 0;
+      }
+
+      header {
+        margin: 1em 0 2em 0;
+      }
+
+      ul,
+      ol {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      footer {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        padding: 1em;
+        background: #fff;
+      }
+
+      .title,
+      a.title,
+      .subtitle,
+      a.subtitle {
+        font-size: 1.2rem;
+        color: currentColor;
+        text-decoration: none;
+      }
+
+      .center {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="center">
+      <h1>
+        <a
+          class="title"
+          href="https://github.com/shwilliam/gradient"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          @shwilliam/gradient
+        </a>
+      </h1>
+    </header>
+
+    <main>
+      <p>
+        <a
+          href="https://github.com/shwilliam/gradient"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Gradient
+        </a>
+        is a service to generate gradients -- <i>duh!</i> A common use case for
+        this is generating placeholder avatars based on a user's email address
+        or username.
+      </p>
+
+      <section>
+        <h2 class="subtitle">Example requests</h2>
+
+        <ul>
+          <li>
+            <code><a href="/boop">/boop</a></code>
+          </li>
+          <li>
+            <code><a href="/boop?size=100">/boop?size=100</a></code>
+          </li>
+          <li>
+            <code><a href="/boop?type=png">/boop?type=png</a></code>
+          </li>
+          <li>
+            <code
+              ><a href="/boop?type=jpeg&size=200,300"
+                >/boop?type=jpeg&size=200,300</a
+              ></code
+            >
+          </li>
+        </ul>
+
+        <p>
+          See <a href="https://github.com/shwilliam/gradient">the docs</a> for
+          more details.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="subtitle">
+          Try it out! <span role="img" aria-label="rocket">🚀</span>
+        </h2>
+
+        <form id="gradient-form">
+          <input
+            type="text"
+            name="seed"
+            placeholder="Type anything here..."
+            autofocus
+            required
+          />
+
+          <button type="submit">Generate</button>
+        </form>
+      </section>
+
+      <section>
+        <h2 class="subtitle">
+          Found a bug? <span role="img" aria-label="bug">🐛</span>
+        </h2>
+
+        <p>
+          If you discover a problem with this project you can
+          <a
+            href="https://github.com/shwilliam/gradient/issues/new"
+            target="_blank"
+            rel="noopener noreferrer"
+            >file an issue</a
+          >
+          and I will try my best to help.
+          <span role="img" aria-label="heart">❤️</span>
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <a
+        href="https://github.com/shwilliam"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        @shwilliam
+      </a>
+    </footer>
+
+    <script>
+      ;(() => {
+        const formEl = document.getElementById('gradient-form')
+        formEl.addEventListener('submit', event => {
+          event.preventDefault()
+          const seedString = event.currentTarget.elements.seed.value
+          window.location.href = `/${seedString}`
+        })
+      })()
+    </script>
+  </body>
+</html>
