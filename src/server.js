@@ -31,6 +31,8 @@ app.get('/:seed', async (req, res) => {
     const [colorA, colorB] = generateColorsFromHash(seedHash)
     const svgGradient = genSvg([width, height], colorA, colorB, seedHash)
 
+    res.setHeader('Cache-Control', 'public, max-age=8640000') // 100 days
+
     switch (type) {
       case 'jpeg':
         res.setHeader('Content-Type', 'image/jpeg')
