@@ -3,10 +3,10 @@ const {app} = require('./server')
 
 describe('server', () => {
   describe('/', () => {
-    it('should return 404', async () => {
+    it('should return 200', async () => {
       const res = await request(app).get('/')
 
-      expect(res.statusCode).toEqual(404)
+      expect(res.statusCode).toEqual(200)
     })
   })
 
