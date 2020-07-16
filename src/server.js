@@ -1,6 +1,7 @@
 import cors from 'cors'
 import express from 'express'
 import morgan from 'morgan'
+import path from 'path'
 import {
   generateColorsFromHash,
   genHash,
@@ -13,6 +14,12 @@ import {
 export const app = express()
 app.use(cors())
 app.use(morgan('combined'))
+
+app.use(express.static(path.join(__dirname, 'public')))
+
+app.get('/', (_req, res) => {
+  res.sendFile('/index.html')
+})
 
 app.get('/:seed', async (req, res) => {
   const seed = req.params.seed
