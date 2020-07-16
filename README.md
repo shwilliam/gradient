@@ -20,9 +20,15 @@ Generate a gradient by passing a string (eg. username or email) as a URL path to
 your endpoint, for example [microgradient.herokuapp.com/shwilliam](https://microgradient.herokuapp.com/shwilliam).
 A request for a gradient will, by default, return a `200px` by `200px` SVG.
 
+### Path
+
+The path of the request is used to pass a string used to seed the gradient.
+Optionally, you can also specify the size of the output. For example,
+`/janedoe/42,42` will return a `42px` by `42px` SVG gradient.
+
 ### Parameters
 
-Pass optional URL parameters to format the requested gradient.
+Pass optional URL query parameters to format the requested gradient.
 
 | Key    | Required | Default | Type                                       | Example                       |
 | ------ | :------: | ------- | ------------------------------------------ | ----------------------------- |
