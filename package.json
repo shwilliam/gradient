@@ -3,9 +3,9 @@
   "description": "",
   "version": "0.1.0",
   "private": "true",
-  "main": "dist/index.js",
+  "main": "build/index.js",
   "scripts": {
-    "start": "node dist/index.js",
+    "start": "node build/index.js",
     "build": "NODE_ENV=production rollup -c",
     "dev": "NODE_ENV=development rollup -c -w",
     "setup:env": "node -r dotenv/config src/index.js",
