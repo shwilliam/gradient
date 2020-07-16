@@ -1,5 +1,6 @@
-import run from '@rollup/plugin-run'
 import babel from '@rollup/plugin-babel'
+import run from '@rollup/plugin-run'
+import copy from 'rollup-plugin-copy'
 
 const dev = process.env.NODE_ENV === 'development'
 
@@ -11,6 +12,14 @@ export default {
   },
   plugins: [
     babel(),
+    copy({
+      targets: [
+        {
+          src: 'src/public/**',
+          dest: 'build/public',
+        },
+      ],
+    }),
     dev &&
       run({
         execArgv: ['-r', 'dotenv/config'],

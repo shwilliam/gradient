@@ -30,6 +30,7 @@
     "dotenv": "^8.2.0",
     "jest": "^26.1.0",
     "rollup": "^2.21.0",
+    "rollup-plugin-copy": "^3.3.0",
     "supertest": "^4.0.2"
   },
   "dependencies": {
