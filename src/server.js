@@ -7,6 +7,7 @@ import {
   genJpeg,
   genPng,
   genSvg,
+  parseDimensions,
 } from './lib/index'
 
 export const app = express()
@@ -15,11 +16,12 @@ app.use(morgan('combined'))
 
 app.get('/:seed', async (req, res) => {
   const seed = req.params.seed
-  const {type} = req.query
+  const {type, size} = req.query
+  const [width, height] = parseDimensions(size)
 
   const seedHash = Math.abs(genHash(seed))
   const [colorA, colorB] = generateColorsFromHash(seedHash)
-  const svgGradient = genSvg(200, colorA, colorB, seedHash)
+  const svgGradient = genSvg([width, height], colorA, colorB, seedHash)
 
   switch (type) {
     case 'jpeg':
