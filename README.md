@@ -32,8 +32,14 @@ Pass optional URL query parameters to format the requested gradient.
 
 | Key    | Required | Default | Type                                       | Example                       |
 | ------ | :------: | ------- | ------------------------------------------ | ----------------------------- |
-| `type` |    ❌    | `'svg'` | `'svg'` \| `'png'` \| `'jpeg'`             | `?type=png`                   |
+| `type` |    ❌    | `'svg'` | `'svg'` \| `'png'` \| `'jpeg'` \| `'ico'`  | `?type=png`                   |
 | `size` |    ❌    | `200`   | `Number` (single or comma-separated tuple) | `?size=20`<br> `?size=100,20` |
+
+### ICO
+
+Generating an ICO version of a gradient works a bit differently. Passing `type=ico`
+returns a page with a download link for the file. Note that the icon created will
+always be `14px` by `14px`; passing a `size` parameter will not have any effect.
 
 ## Development
 
