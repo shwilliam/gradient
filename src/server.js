@@ -49,7 +49,7 @@ app.get('/:seed/:size?', async (req, res) => {
         res.setHeader('Content-Type', 'text/html')
         res.send(
           generateFaviconDownloadHtml(
-            `${process.env.BASE_URL}${req.originalUrl}`,
+            `${process.env.BASE_URL}${req._parsedOriginalUrl.pathname}`,
           ),
         )
         break
