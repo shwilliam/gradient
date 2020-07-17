@@ -57,6 +57,14 @@ docker build --tag gg:1.0 .
 docker run -p 1234:1234 -d --name gg gg:1.0
 ```
 
+## References
+
+This project leans heavily on the [`sharp`](https://github.com/lovell/sharp)
+library for image processing and [`color`](https://github.com/Qix-/color) for
+color manipulation. Alternative solutions that were referenced include
+[`get-gravatar`](https://github.com/sindresorhus/get-gravatar) and
+[`avatar`](https://github.com/tobiaslins/avatar/).
+
 ## Contributing
 
 This project is open to and encourages contributions! Feel free to discuss any
