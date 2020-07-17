@@ -13,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shwilliam/gradient-generator.git"
+    "url": "git+https://github.com/shwilliam/gradient.git"
   },
   "author": "William L",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/shwilliam/gradient-generator/issues"
+    "url": "https://github.com/shwilliam/gradient/issues"
   },
-  "homepage": "https://github.com/shwilliam/gradient-generator#readme",
+  "homepage": "https://github.com/shwilliam/gradient#readme",
   "devDependencies": {
     "@babel/core": "^7.10.5",
     "@babel/preset-env": "^7.10.4",
