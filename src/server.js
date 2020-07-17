@@ -4,6 +4,7 @@ import morgan from 'morgan'
 import path from 'path'
 import {
   generateColorsFromHash,
+  generateFaviconDownloadHtml,
   genHash,
   genJpeg,
   genPng,
@@ -43,6 +44,14 @@ app.get('/:seed/:size?', async (req, res) => {
       case 'png':
         res.setHeader('Content-Type', 'image/png')
         res.send(await genPng(svgGradient))
+        break
+      case 'ico':
+        res.setHeader('Content-Type', 'text/html')
+        res.send(
+          generateFaviconDownloadHtml(
+            `${process.env.BASE_URL}${req.originalUrl}`,
+          ),
+        )
         break
       default:
         res.setHeader('Content-Type', 'image/svg+xml')

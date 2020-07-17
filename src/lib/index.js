@@ -1,4 +1,5 @@
 export * from './colors'
+export * from './favicon'
 export * from './image'
 export * from './svg'
 export * from './utils'
