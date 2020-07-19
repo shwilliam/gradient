@@ -3,7 +3,7 @@
 > Gradients as a service
 
 <kbd>
-  <a href="https://microgradient.herokuapp.com/hello" target="_blank" rel="noopener noreferrer">
+  <a href="https://microgradient.herokuapp.com/" target="_blank" rel="noopener noreferrer">
     check out the demo
   </a>
 </kbd>
