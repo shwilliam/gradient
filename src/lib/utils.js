@@ -13,3 +13,13 @@ export const genHash = str => {
 
   return hash
 }
+
+export const parseExtension = string => {
+  if (!string || string.indexOf('.') === -1) return [string, null]
+
+  const stringParts = string.split('.')
+  const extension = stringParts[stringParts.length - 1]
+  const baseString = stringParts.slice(0, stringParts.length1).join()
+
+  return [baseString, extension]
+}

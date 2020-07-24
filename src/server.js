@@ -10,6 +10,7 @@ import {
   genPng,
   genSvg,
   parseDimensions,
+  parseExtension,
 } from './lib/index'
 
 export const app = express()
@@ -24,19 +25,24 @@ app.get('/', (_req, res) => {
 
 app.get('/:seed/:size?', async (req, res) => {
   try {
-    const seed = req.params.seed
-    const sizeParam = req.params.size
+    const [seedParam, seedExtension] = parseExtension(req.params.seed)
+    const [sizeParam, sizeExtension] = parseExtension(req.params.size)
 
-    const {type, size: sizeQuery} = req.query
+    const {type: typeQuery, size: sizeQuery} = req.query
     const [width, height] = parseDimensions(sizeParam || sizeQuery)
 
-    const seedHash = Math.abs(genHash(seed))
+    const seedHash = Math.abs(genHash(seedParam))
     const [colorA, colorB] = generateColorsFromHash(seedHash)
     const svgGradient = genSvg([width, height], colorA, colorB, seedHash)
+    const outputType = typeQuery || sizeExtension || seedExtension
 
     res.setHeader('Cache-Control', 'public, max-age=8640000') // 100 days
 
-    switch (type) {
+    switch (outputType) {
+      case 'jpg':
+        res.setHeader('Content-Type', 'image/jpeg')
+        res.send(await genJpeg(svgGradient))
+        break
       case 'jpeg':
         res.setHeader('Content-Type', 'image/jpeg')
         res.send(await genJpeg(svgGradient))
