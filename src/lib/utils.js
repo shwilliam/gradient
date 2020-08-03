@@ -14,12 +14,16 @@ export const genHash = str => {
   return hash
 }
 
+export const VALID_EXTENSIONS = ['jpg', 'jpeg', 'png', 'ico']
+
 export const parseExtension = string => {
   if (!string || string.indexOf('.') === -1) return [string, null]
 
   const stringParts = string.split('.')
   const extension = stringParts[stringParts.length - 1]
-  const baseString = stringParts.slice(0, stringParts.length1).join()
 
+  if (!VALID_EXTENSIONS.includes(extension)) return string
+
+  const baseString = stringParts.slice(0, stringParts.length - 1).join('.')
   return [baseString, extension]
 }
