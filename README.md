@@ -10,9 +10,9 @@
 
 ## Examples
 
-| <img alt="boop gradient" src="https://user-images.githubusercontent.com/38357771/87625117-34da9100-c6de-11ea-9137-4d7b77a3a349.jpg" width="80" height="80"> | <img alt="noob gradient" src="https://user-images.githubusercontent.com/38357771/87625119-360bbe00-c6de-11ea-9493-ffcb49c0e68e.jpg" width="80" height="80"> | <img alt="timpope gradient" src="https://user-images.githubusercontent.com/38357771/87625121-373ceb00-c6de-11ea-9136-2ade1d327ae7.jpg" width="80" height="80"> |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `/boop`                                                                                                                                                     | `/noob`                                                                                                                                                     | `/timpope`                                                                                                                                                     |
+| <img alt="boop gradient" src="https://microgradient.herokuapp.com/boop/linear/80,80.jpg" width="80" height="80"> | <img alt="fizz gradient" src="https://microgradient.herokuapp.com/fizz/linear/80,80.jpg" width="80" height="80"> | <img alt="buzz gradient" src="https://microgradient.herokuapp.com/buzz/linear/80,80.jpg" width="80" height="80"> |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `/boop`                                                                                                          | `/fizz`                                                                                                          | `/buzz`                                                                                                          |
 
 ## Usage
 
