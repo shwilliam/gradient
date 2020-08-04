@@ -23,17 +23,19 @@ A request for a gradient will, by default, return a `200px` by `200px` SVG.
 ### Path
 
 The path of the request is used to pass a string used to seed the gradient.
-Optionally, you can also specify the size of the output. For example,
-`/janedoe/42,42` will return a `42px` by `42px` SVG gradient.
+Optionally, you can also specify the type of gradient to be generated, as well
+as its size. For example, `/janedoe/radial/42,42` will return a radial,
+`42px` by `42px` SVG gradient.
 
 ### Parameters
 
 Pass optional URL query parameters to format the requested gradient.
 
-| Key    | Required | Default | Type                                       | Example                       |
-| ------ | :------: | ------- | ------------------------------------------ | ----------------------------- |
-| `type` |    ❌    | `'svg'` | `'svg'` \| `'png'` \| `'jpeg'` \| `'ico'`  | `?type=png`                   |
-| `size` |    ❌    | `200`   | `Number` (single or comma-separated tuple) | `?size=20`<br> `?size=100,20` |
+| Key       | Required | Default    | Type                                       | Example                       |
+| --------- | :------: | ---------- | ------------------------------------------ | ----------------------------- |
+| `type`    |    ❌    | `'svg'`    | `'svg'` \| `'png'` \| `'jpeg'` \| `'ico'`  | `?type=png`                   |
+| `size`    |    ❌    | `200`      | `Number` (single or comma-separated tuple) | `?size=20`<br> `?size=100,20` |
+| `variant` |    ❌    | `'linear'` | `'linear'` \| `'radial'`                   | `?variant=radial`             |
 
 ### ICO
 
