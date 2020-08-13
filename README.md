@@ -1,18 +1,29 @@
-# Gradient
+<br>
 
-> Gradients as a service
+<p align="center">
+  <img alt="example gradient" src="https://microgradient.herokuapp.com/test/linear/80,80.jpg" width="80" height="80">
+</p>
 
-<kbd>
-  <a href="https://microgradient.herokuapp.com/" target="_blank" rel="noopener noreferrer">
-    check out the demo
-  </a>
-</kbd>
+<h1 align="center">
+  Gradient
+</h1>
+
+<p align="center">
+  <kbd>
+    <a href="https://microgradient.herokuapp.com/" target="_blank" rel="noopener noreferrer">
+      check out the demo
+    </a>
+  </kbd>
+</p>
+
+<br>
+<br>
 
 ## Examples
 
-| <img alt="boop gradient" src="https://microgradient.herokuapp.com/boop/linear/80,80.jpg" width="80" height="80"> | <img alt="fizz gradient" src="https://microgradient.herokuapp.com/fizz/linear/80,80.jpg" width="80" height="80"> | <img alt="buzz gradient" src="https://microgradient.herokuapp.com/buzz/linear/80,80.jpg" width="80" height="80"> |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `/boop`                                                                                                          | `/fizz`                                                                                                          | `/buzz`                                                                                                          |
+| <img alt="boop gradient" src="https://microgradient.herokuapp.com/boop/linear/80,80.jpg" width="80" height="80"> | <img alt="fizz gradient" src="https://microgradient.herokuapp.com/fizz/linear/80,80.jpg" width="80" height="80"> | <img alt="buzz gradient" src="https://microgradient.herokuapp.com/buzz/linear/80,80.jpg" width="80" height="80"> | <img alt="ok radial gradient" src="https://microgradient.herokuapp.com/ok/radial/80,80.jpg" width="80" height="80"> | <img alt="yep wide gradient" src="https://microgradient.herokuapp.com/yep/linear/160,80.jpg" width="160" height="80"> |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `/boop`                                                                                                          | `/fizz`                                                                                                          | `/buzz`                                                                                                          | `/ok/radial`                                                                                                        | `/yep/linear/160,80`                                                                                                  |  |
 
 ## Usage
 
@@ -69,9 +80,9 @@ docker run -p 1234:1234 -d --name gg gg:1.0
 
 This project leans heavily on the [`sharp`](https://github.com/lovell/sharp)
 library for image processing and [`color`](https://github.com/Qix-/color) for
-color manipulation. Alternative solutions that were referenced include
-[`get-gravatar`](https://github.com/sindresorhus/get-gravatar) and
-[`avatar`](https://github.com/tobiaslins/avatar/).
+color manipulation. Other open-source projects that offer similar solutions to
+this one include [`get-gravatar`](https://github.com/sindresorhus/get-gravatar)
+and [`avatar`](https://github.com/tobiaslins/avatar/).
 
 ## Contributing
 
