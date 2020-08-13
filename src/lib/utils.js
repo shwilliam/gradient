@@ -14,7 +14,7 @@ export const genHash = str => {
   return hash
 }
 
-export const VALID_EXTENSIONS = ['jpg', 'jpeg', 'png', 'ico']
+export const VALID_EXTENSIONS = ['jpg', 'jpeg', 'png', 'ico', 'svg']
 
 export const parseExtension = string => {
   if (!string || string.indexOf('.') === -1) return [string, null]
