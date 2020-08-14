@@ -14,6 +14,11 @@
       check out the demo
     </a>
   </kbd>
+  <kbd>
+    <a href="https://heroku.com/deploy?template=https://github.com/shwilliam/gradient">
+      deploy to heroku
+    </a>
+  </kbd>
 </p>
 
 <br>
