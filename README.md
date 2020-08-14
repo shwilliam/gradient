@@ -47,6 +47,7 @@ Pass optional URL query parameters to format the requested gradient.
 | `type`    |    ❌    | `'svg'`    | `'svg'` \| `'png'` \| `'jpeg'` \| `'ico'`  | `?type=png`                   |
 | `size`    |    ❌    | `200`      | `Number` (single or comma-separated tuple) | `?size=20`<br> `?size=100,20` |
 | `variant` |    ❌    | `'linear'` | `'linear'` \| `'radial'`                   | `?variant=radial`             |
+| `text`    |    ❌    | none       | `String`                                   | `?text=JD`                    |
 
 ### ICO
 
