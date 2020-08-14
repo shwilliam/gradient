@@ -1,0 +1,7 @@
+{
+  "name": "Gradient",
+  "description": "Gradients as a service",
+  "repository": "https://github.com/shwilliam/gradient",
+  "logo": "https://microgradient.herokuapp.com/test/linear/80,80.jpg",
+  "keywords": ["node", "gradient", "svg", "image"]
+}
