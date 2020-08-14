@@ -23,15 +23,22 @@ app.get('/', (_req, res) => {
   res.sendFile('/index.html')
 })
 
-app.get('/:seed/:variant?/:size?', async (req, res) => {
+app.get('/:seed/:variant?/:size?/:text?', async (req, res) => {
   try {
     const [seedParam, seedExtension] = parseExtension(req.params.seed)
     const [variantParam, variantExtension] = parseExtension(req.params.variant)
     const [sizeParam, sizeExtension] = parseExtension(req.params.size)
+    const [textParam, textExtension] = parseExtension(req.params.text)
 
-    const {type: typeQuery, size: sizeQuery, variant: variantQuery} = req.query
+    const {
+      type: typeQuery,
+      size: sizeQuery,
+      variant: variantQuery,
+      text: textQuery,
+    } = req.query
     const variant = variantParam || variantQuery
     const [width, height] = parseDimensions(sizeParam || sizeQuery)
+    const text = textParam || textQuery || ''
 
     const seedHash = Math.abs(genHash(seedParam))
     const [colorA, colorB] = generateColorsFromHash(seedHash)
@@ -41,9 +48,14 @@ app.get('/:seed/:variant?/:size?', async (req, res) => {
       colorB,
       seedHash,
       variant,
+      text,
     )
     const outputType =
-      typeQuery || sizeExtension || variantExtension || seedExtension
+      typeQuery ||
+      textExtension ||
+      sizeExtension ||
+      variantExtension ||
+      seedExtension
 
     res.setHeader('Cache-Control', 'public, max-age=8640000') // 100 days
 
