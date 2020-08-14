@@ -4,6 +4,7 @@ export const genSvg = (
   colorB,
   offset = 45,
   type = 'linear',
+  text = '',
 ) => `<?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg width="${size[0]}" height="${size[1]}" viewBox="0 0 ${size[0]} ${
@@ -12,6 +13,9 @@ export const genSvg = (
   <rect fill="url(#${
     type === 'radial' ? 'radial-' : ''
   }gradient)" x="0" y="0" width="${size[0]}" height="${size[1]}"/>
+  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#fff" font-family="sans-serif" font-size="${
+    Math.min(...size) * 0.4
+  }">${text}</text>
   <defs>
     <linearGradient id="gradient" x1="0" y1="0" x2="1" y2="1" gradientTransform="rotate(${offset})">
       <stop offset="0%" stop-color="${colorA}"/>
