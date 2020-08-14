@@ -15,7 +15,7 @@
     </a>
   </kbd>
   <kbd>
-    <a href="https://heroku.com/deploy?template=https://github.com/shwilliam/gradient">
+    <a href="https://heroku.com/deploy?template=https://github.com/shwilliam/gradient/tree/main">
       deploy to heroku
     </a>
   </kbd>
